@@ -15,6 +15,7 @@ From the MetaMap Lite folder run the `install-maven-artifacts` (.bat or .sh, dep
 This step makes the libraries needed by MetaMap Lite available through Maven.
 
 Once the libraries are installed, run the script below to install the MetaMap Lite library so it is available to Maven.
+Avoid the standalone jar file provided with MetaMap Lite since it points to a version of UIMA incompatible with this tool.
 
 ```
 mvn install:install-file  -Dfile=target/metamaplite-3.6.2rc6.jar ^
@@ -27,7 +28,5 @@ mvn install:install-file  -Dfile=target/metamaplite-3.6.2rc6.jar ^
 Clone and install [readbiomed-uima-python-interface](https://github.com/READ-BioMed/readbiomed-uima-python-interface)
 
 To install readbiomed-metamaplite-uima, first clone it.
-
-Find a way to install the target jar file under MetaMap Lite's target folder (avoid the standalone one) and all the libraries under the lib folder in the CLASSPATH environment variable.
 
 Run `mvn install` from the readbiomed-metamaplite-uima file. When running or setting it up, use the CLASSPATH configured in the step above.
